@@ -1,0 +1,120 @@
+<main class="mt-12 lg:mt-0">
+  <section
+    class="bg-gradient-to-r from-indigo-300 via-purple-500 to-pink-200 rounded-2xl lg:-mt-[7rem] shadow-2xl max-w-screen-xl flex gap-12 flex-col flex-nowrap justify-between items-center mx-auto p-4"
+  >
+    <div class="lg:p-2 py-12 w-full">
+      <div class="flex flex-row flex-wrap w-full items-center justify-center">
+        <div class="sm:basis-1/2 lg:basis-1/3 sm:pr-4 w-full">
+          <div
+            class="flex gap-4 flex-col items-center mt-4 border border-gray-200 px-4 py-6 rounded-2xl w-full"
+          >
+            <div
+              class="bg-indigo-300 p-3 rounded-full w-12 h-12 flex items-center justify-center"
+            >
+              <fa-icon
+                [icon]="faDesktop"
+                class="text-white"
+                size="2xl"
+              ></fa-icon>
+            </div>
+
+            <div class="text-white text-xl font-semibold">Monitores</div>
+            <div class="text-neutral-100">
+              Monitores de diferentes marcas y pulgadas.
+            </div>
+          </div>
+        </div>
+
+        <div class="sm:basis-1/2 lg:basis-1/3 lg:pr-4 w-full">
+          <div
+            class="flex gap-4 flex-col items-center mt-4 border border-gray-200 px-4 py-6 rounded-2xl w-full"
+          >
+            <div
+              class="bg-indigo-300 p-3 rounded-full w-12 h-12 flex items-center justify-center"
+            >
+              <fa-icon
+                [icon]="faLaptop"
+                class="text-white"
+                size="2xl"
+              ></fa-icon>
+            </div>
+            <div class="text-white text-xl font-semibold">Laptops</div>
+            <div class="text-neutral-100">
+              Portatiles de marcas como Apple y Huawei.
+            </div>
+          </div>
+        </div>
+
+        <div class="sm:basis-1/2 lg:basis-1/3 w-full">
+          <div
+            class="flex gap-4 flex-col items-center mt-4 border border-gray-200 px-4 py-6 rounded-2xl w-full"
+          >
+            <div
+              class="bg-indigo-300 p-3 rounded-full w-12 h-12 flex items-center justify-center"
+            >
+              <fa-icon [icon]="faApple" class="text-white" size="2xl"></fa-icon>
+            </div>
+            <div class="text-white text-xl font-semibold">Apple</div>
+            <div class="text-neutral-100">
+              Mejores productos de Apple nuevos y sellados.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="my-16 max-w-screen-xl flex gap-12 flex-col flex-nowrap justify-between items-center mx-auto p-4"
+  >
+    <div class="flex flex-col gap-12 w-full">
+      <h2 class="text-indigo-500 text-center text-3xl font-semibold">
+        ¿Por qué elegirnos?
+      </h2>
+
+      <div class="flex flex-row flex-wrap items-center w-full">
+        <div
+          class="lg:basis-1/3 md:basis-1/2 md:pr-4 relative flex items-center justify-center"
+        >
+          <div
+            class="w-[16rem] h-[16rem] absolute bg-gradient-to-r from-indigo-300 via-purple-500 to-pink-200 rounded-full z-0"
+          ></div>
+          <img src="/assets/audifonos-gaming.webp" class="rounded-xl z-10" />
+        </div>
+
+        <div class="lg:basis-2/3 md:basis-1/2 mt-12 md:mt-0 w-full">
+          <h3 class="text-2xl font-semibold text-purple-500">
+            Somos la mejor elección
+          </h3>
+          <p class="text-neutral-700 text-sm mt-4">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+            necessitatibus impedit aliquam labore eaque molestiae voluptatum.
+            Quibusdam eos minus repellat enim. Exercitationem et ex blanditiis
+            molestiae iusto molestias, labore corporis.
+          </p>
+
+          <div class="flex flex-row flex-wrap gap-6 mt-10">
+            <div
+              *ngFor="let item of iconBox"
+              class="bg-indigo-100 px-5 relative sm:w-[15rem] w-full rounded-lg py-6 drop-shadow-lg border-2 border-white"
+            >
+              <div
+                class="w-10 h-10 absolute -top-4 left-5 bg-indigo-400 rounded-xl flex items-center justify-center"
+              >
+                <fa-icon
+                  [icon]="item.icon"
+                  class="text-xl text-gray-200"
+                ></fa-icon>
+              </div>
+
+              <h3 class="text-indigo-400 mt-4">{{ item.name }}</h3>
+              <p class="text-xs text-neutral-900">
+                {{ item.description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
